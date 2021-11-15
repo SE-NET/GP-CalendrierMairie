@@ -1,0 +1,28 @@
+    <link href={{ asset('assets/calendar/css/main.min.css') }} rel='stylesheet' />
+    <script src={{ asset('assets/calendar/js/main.min.js') }}></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'fr',
+                firstDay: 1,
+                editable: true,
+                selectable: true,
+                businessHours: true,
+                dayMaxEvents: true, // allow "more" link when too many events
+                events: {
+                    url: '{{ asset('assets/calendar/php/get-events.php') }}',
+                    failure: function() {
+                        document.getElementById('script-warning').style.display = 'block'
+                    }
+                },
+            });
+
+            calendar.render();
+        });
+
+    </script>
+
+<div id="calendar" style="max-width: 60%; margin: 0 auto;"></div>
