@@ -3,5 +3,6 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+    <a href="{{ path('add_event') }}">Ajouter évènement</a>
     {% include 'calendar/calendar.html.twig' %}
 {% endblock %}

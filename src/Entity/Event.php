@@ -1,0 +1,92 @@
+<?php
+
+namespace App\Entity;
+
+use App\Repository\EventRepository;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity(repositoryClass=EventRepository::class)
+ */
+class Event
+{
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $allDay;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $dateEnd;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(?string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getAllDay(): ?bool
+    {
+        return $this->allDay;
+    }
+
+    public function setAllDay(bool $allDay): self
+    {
+        $this->allDay = $allDay;
+
+        return $this;
+    }
+
+    public function getDateEnd(): ?\DateTimeInterface
+    {
+        return $this->dateEnd;
+    }
+
+    public function setDateEnd(?\DateTimeInterface $dateEnd): self
+    {
+        $this->dateEnd = $dateEnd;
+
+        return $this;
+    }
+}
