@@ -6,14 +6,175 @@
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
+            <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+            <link href="{{ asset('assets/css/style_defaut.css') }}" rel="stylesheet" />
+            <link href="{{ asset('assets/css/style_layout.css') }}" rel="stylesheet" />
+            <link href="{{ asset('assets/css/spip.php?page=bando.css') }}" rel="stylesheet" />
+            <link href={{ asset('assets/calendar/css/main.min.css') }} rel='stylesheet' />
         {% endblock %}
 
         {% block javascripts %}
+            <script src={{ asset('assets/calendar/js/main.min.js') }}></script>
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block nav %}
+        <div id="entete">
+            <div id="header" class="g100">
+                <div id="bienvenue" class="g33" role="banner">
+                    <h1 id="logo">
+                        <a href="" title="Accueil"><img src="https://www.commune-rosieres10.fr/IMG/siteon0.png?1434449654" alt="Commune de Rosi&#232;res" /></a>
+                    </h1>
+                </div>
+                <div id="social" class="g33">
+                    <div class="contenu_pave">&nbsp;</div>
+                </div>
+                <div id="utilitaires" class="g33">
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contenu">Contenu principal</a></li>
+                        <li><a href="#Plan-du-site">Plan du site</a></li>
+                    </ul>
+                    <div id="moteur">
+                        <div class="formulaire_spip formulaire_recherche" id="formulaire_recherche">
+                            <form action="Recherche" method="get"><div>
+                                    <input name="id_article" value="2" type="hidden"/>
+                                    <input name="page" value="article" type="hidden"/>
+
+                                    <label for="recherche">Rechercher :</label>
+                                    <input type="text" class="text" size="10" name="recherche" id="recherche" placeholder="Recherche..." />
+                                    <input type="image" src="https://www.commune-rosieres10.fr/squelettes/habillage/loupe.png" name="ok" id="ok" class="submit" alt="Rechercher" title="Rechercher" />
+                                </div></form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="nav_top" class="g100">
+                <div id="menu_main" class="g100 withjavascript" role="navigation">
+                    <ul id="navtop">
+                       <li id="li8" class="submenu">
+                           <span>
+                               <a href="" class="theme">Vie municipale</a>
+                           </span>
+                           <ul class="smenu8">
+                               <li>
+                                   <a href="">Le mot du Maire</a>
+                               </li>
+                               <li>
+                                   <a href="">Histoire de la commune</a>
+                               </li>
+                               <li>
+                                   <a href="">Le Conseil Municipal</a>
+                               </li>
+                               <li>
+                                   <a href="">Les finances communales</a>
+                               </li>
+                               <li>
+                                   <a href="">Les services municipaux</a>
+                               </li>
+                               <li>
+                                   <a href="">La police mutualisée</a>
+                               </li>
+                               <li>
+                                   <a href="">Les équipements municipaux</a>
+                               </li>
+                               <li>
+                                   <a href="">Les cérémonies commémoratives</a>
+                               </li>
+                               <li>
+                                   <a href="">Les revues municipales</a>
+                               </li>
+                               <li>
+                                   <a href="">Les marchés publics</a>
+                               </li>
+                               <li>
+                                   <a href="">Les enquêtes publiques</a>
+                               </li>
+                           </ul>
+                       </li>
+                        <li id="li9" class="submenu">
+                            <span>
+                                <a href="" class="theme">Enfance, jeunesse</a>
+                            </span>
+                            <ul class="smenu9">
+                                <li>
+                                    <a href="">Le groupe scolaire (maternelle et élémentaire)</a>
+                                </li>
+                                <li>
+                                    <a href="">Le règlement intérieur des services périscolaires et extrascolaires</a>
+                                </li>
+                                <li>
+                                    <a href="">La restauration scolaire</a>
+                                </li>
+                                <li>
+                                    <a href="">L’ étude surveillée</a>
+                                </li>
+                                <li>
+                                    <a href="">Le transport des scolaires</a>
+                                </li>
+                                <li>
+                                    <a href="">L’accueil de loisirs</a>
+                                </li>
+                                <li>
+                                    <a href="">Le Club Ados</a>
+                                </li>
+                                <li>
+                                    <a href="">Collège, lycée et enseignement supérieur</a>
+                                </li>
+                                <li>
+                                    <a href="">Musique, Sports, Pompiers, Parent’Housiasme</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="li10" class="submenu">
+                            <span>
+                                <a href="" class="theme">Vie pratique</a>
+                            </span>
+                            <ul class="smenu10"></ul>
+                        </li>
+                        <li id="li114" class="submenu">
+                            <span>
+                                <a href="" class="theme">Environnement urbanisme</a>
+                            </span>
+                            <ul class="smenu114"> </ul>
+                        </li>
+                        <li id="li11" class="submenu">
+                            <span>
+                                <a href="" class="theme">Culture, sports et loisirs</a>
+                            </span>
+                            <ul class="smenu11"></ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block body %}
+
+        {% endblock %}
     </body>
+    {% block footer %}
+        <footer id="bas">
+            <div id="footer" class="g100">
+                <div id="adresse" class="pave">
+                    <h2 class="decale"><span class="intitule">Nous contacter</span></h2>
+                    <div class="contenu_pave"><p><strong>Mairie de Rosières&nbsp;: </strong></p>
+                        <ul class="spip"><li> Place Charles de Gaulle - BP 30118</li><li> 10430 ROSIERES PRES TROYES</li><li> Tél. 03 25 82 48 00</li><li> Fax. 03 25 82 25 01</li><li> E-mail&nbsp;: <a href="mailto:mairie@rosieres10.fr" class='spip_mail'>mairie@rosieres10.fr</a></li><li> Heures d’ouverture&nbsp;: lundi, mardi, jeudi, vendredi 8h-12h / 13h30-17h30. Mercredi 9h-12h/14h-17h30.</li></ul>
+                        <p>...</p></div><!-- .contenu_pave -->
+                </div><!-- .pave -->
+            </div><!-- #footer -->
+            <div id="liens_pied" class="g100">
+                <ul class="liens_pied">
+                    <li><a href="https://www.commune-rosieres10.fr">Accueil</a></li>
+                    <li><a href="Accessibilite">Accessibilité</a></li>
+                    <li><a href="Contact">Contact</a></li>
+                    <li><a href="Mentions-legales">Mentions légales</a></li>
+                    <li><a href="Plan-du-site">Plan du site</a></li>
+                    <li><a href="https://www.commune-rosieres10.fr/ecrire/">Espace privé</a></li>
+                    <li><a href="http://www.mandibul.fr/" target="_blank" title="Conception & développement">©</a></li>
+                </ul><!-- liens_pied -->
+            </div><!-- #liens_pied -->
+        </footer><!-- #pied -->
+    {% endblock %}
 </html>

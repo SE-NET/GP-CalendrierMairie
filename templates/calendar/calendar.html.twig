@@ -1,7 +1,53 @@
-    <link href={{ asset('assets/calendar/css/main.min.css') }} rel='stylesheet' />
-    <script src={{ asset('assets/calendar/js/main.min.js') }}></script>
-    <script>
+{% extends 'base.html.twig' %}
 
+
+    {% block title %}Commune de Rosières{% endblock %}
+
+{% block body %}
+    <nav id="menu" role="navigation" class="g25">
+        <div id="menu_lateral">
+        </div><!-- #menu_lateral -->
+
+        <div id="post_navigation">
+            <div id="direct" class="pave">
+                <h2 class="decale"><span class="intitule">En 1 clic</span></h2>
+                <div class="contenu_pave">
+                    <ul class="tablo">
+                        <li class="case"><a href="Annuaires-114"> <span class="picto"><img src="../../public/assets/img/arton114-edb70.png" alt="" /></span><span class="intitule">Annuaires</span></a></li>
+                        <li class="case"><a href="Plan-de-la-commune"> <span class="picto"><img src="../../public/assets/img/arton115-d93ea.png" alt="" /></span><span class="intitule">Plan de la commune</span></a></li>
+                        <li class="case"><a href="Agenda"> <span class="picto"><img src="../../public/assets/img/arton116-b8d82.png" alt="" /></span><span class="intitule">Agenda</span></a></li>
+                    </ul>
+                </div><!-- .contenu_pave -->
+            </div><!-- .pave -->
+            <div id="boutons_pratique" class="pave">
+                <h2 class="decale"><span class="intitule">Pratique</span></h2>
+                <div class="contenu_pave"><a href="Demarches-en-ligne-221"><img class="spip_logos" alt='D&#233;marches en ligne' src="../../public/assets/img/arton221.png?1448546671" width="480" height="120" onmouseover="this.src='../../public/assets/img/artoff221.png?1448546738'" onmouseout="this.src='../../public/assets/img/arton221.png?1448546671'" /></a>
+                    <br/>
+                    <figure class='spip_document_1105 spip_documents media media_image media_image_png'><a href="https://portail5.aiga.fr/index.php5?client=10340" title="https://portail5.aiga.fr/index.php5..."><img src="../../public/assets/img/portailfamille.png" height="235" width="264" alt='Acc&#232;s au portail famille' /></a></figure>
+                    <br/>
+                    <figure class='spip_document_545 spip_documents media media_image media_image_gif'><a href="http://www.tipi.budget.gouv.fr" title="http://www.tipi.budget.gouv.fr"><img src="../../public/assets/img/banniere_tipi_url_300250.gif" height="250" width="300" alt='Payez vos factures en ligne avec TIPI' /></a></figure></div><!-- .contenu_pave -->
+            </div><!-- .pave -->
+        </div><!-- #post_navigation -->
+
+        <div id="mag" class="pave">
+            <h2 class="titraille"><span class="intitule">Publications</span></h2>
+            <div class="contenu_pave">
+                <dl class="document">
+                    <dt class="g25">
+                        <div class="logo"><a href="IMG/pdf/le-caillotin-114.pdf" title="Le Caillotin n&#176; 114-PDF-3.1&#160;Mo - nouvelle fen&ecirc;tre" target="_blank"><img src="../../public/assets/img/pdf-39070.png" class="img_png" alt="Le Caillotin n&#176; 114-PDF-3.1&#160;Mo" /></a></div>
+                    </dt>
+                    <dd class="g75">
+                        <div class="titre">Le Caillotin n&#176;&nbsp;114</div>
+                        <div class="date">octobre 2021</div>
+                        <div class="telecharger"><a href="IMG/pdf/le-caillotin-114.pdf" title="Le Caillotin n&#176; 114-PDF-3.1&#160;Mo - nouvelle fen&ecirc;tre" class="telechargement" target="_blank">T&eacute;l&eacute;charger (PDF-3.1&#160;Mo)</a></div>
+                    </dd><!-- .document -->
+                </dl><!-- .document -->
+                <div class="bouton"><a href="-Les-revues-municipales-" class="url">Voir tout</a></div>
+            </div><!-- contenu_pave -->
+        </div><!-- pave -->
+    </nav><!-- #menu_gauche -->
+
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const calendarEl = document.getElementById('calendar');
 
@@ -13,7 +59,7 @@
                 businessHours: true,
                 dayMaxEvents: true, // allow "more" link when too many events
                 events: {
-                    url: '{{ asset('assets/calendar/php/get-events.php') }}',
+                    url: '{{ asset('/assets/calendar/php/get-events.php') }}',
                     failure: function() {
                         document.getElementById('script-warning').style.display = 'block'
                     }
@@ -22,7 +68,20 @@
 
             calendar.render();
         });
-
     </script>
 
-<div id="calendar" style="max-width: 60%; margin: 0 auto;"></div>
+    <div id="content" role="main" class="g75 surlignable">
+        <div id="ariane">
+            <a href="https://www.commune-rosieres10.fr/"><br>
+                <span class="icon-home">
+                    <img src="../../public/assets/img/home.png" width="18" height="18" alt="Accueil" class="decale" />
+                </span></a>  &gt;
+            <strong>Agenda des événements</strong>
+        </div><!-- /#ariane -->
+    </div><br>
+    <h1 class="crayon article-titre-109 ">Agenda des événements</h1><br>
+    <div id="calendar" style="max-width: 60%; margin: 0 auto; background-color: white;"></div>
+
+
+
+{% endblock %}

@@ -1,0 +1,337 @@
+/* @override 
+	http://ks392934.kimsufi.com/~rosieres/squelettes/css/style_layout.css
+/*
+	Fluid Baseline Grid v1.0.0
+	Designed & Built by Josh Hopkins and 40 Horse, http://40horse.com	
+	Licensed under Unlicense, http://unlicense.org/
+	
+	
+	Base stylesheet with CSS normalization, typographic baseline grid and progressive responsiveness
+*/
+
+
+/* @group Layout */
+
+/* DEFAULT MOBILE STYLE */
+body {width: 92%; margin: 0 auto; min-height: 100%;} /* Center page without wrapper */
+/* column grid */
+.g100,.g25,.g33,.g50,.g66,.g75{display:block; position: relative; left: 0; margin: 0;height: auto;}
+/* 1 column grid */
+.g100,.g25,.g33,.g50,.g66,.g75{width:100%;}
+
+
+/* 480px ----------- */
+@media only screen and (min-width : 30em) {
+/* Styles */
+
+.g100,.g25,.g33,.g50,.g66,.g75 {display:inline; float: left;}
+.g100.marge {width: calc(100% - 1em);padding-left: 1em;}
+.g25.marge {width: calc(25% - 1em);padding-left: 1em;}
+.g33.marge {width: calc(33.33% - 1em);padding-left: 1em;}
+.g50.marge {width: calc(50% - 1em);padding-left: 1em;}
+.g66.marge {width: calc(66.66% - 1em);padding-left: 1em;}
+.g75.marge {width: calc(75% - 1em);padding-left: 1em;}
+.g50 .g50 .g25 {width: 25%;}
+.g50 .g50 .g33 {width: 33.33%;}
+.g50 .g50 .g50 {width: 50%;}
+.g50 .g50 .g66 {width: 66.66%;}
+.g50 .g50 .g75 {width: 75%;}
+.g50 .g66 .g25 {width: 25%;}
+.g50 .g66 .g33 {width: 33.33%;}
+.g50 .g66 .g50 {width: 50%;}
+.g50 .g66 .g66 {width: 66.66%;}
+.g50 .g66 .g75 {width: 75%;}
+.g50 .g75 .g25 {width: 25%;}
+.g50 .g75 .g33 {width: 33.33%;}
+.g50 .g75 .g50 {width: 50%;}
+.g50 .g75 .g66 {width: 66.66%;}
+.g50 .g75 .g75 {width: 75%;}
+
+.g75 .g33 .g25 {width: 25%;}
+.g75 .g33 .g33 {width: 33.33%;}
+.g75 .g33 .g50 {width: 50%;}
+.g75 .g33 .g66 {width: 66.66%;}
+.g75 .g33 .g75 {width: 75%;}
+.g75 .g50 .g25 {width: 25%;}
+.g75 .g50 .g33 {width: 33.33%;}
+.g75 .g50 .g50 {width: 50%;}
+.g75 .g50 .g66 {width: 66.66%;}
+.g75 .g50 .g75 {width: 75%;}
+.g75 .g66 .g25 {width: 25%;}
+.g75 .g66 .g33 {width: 33.33%;}
+.g75 .g66 .g50 {width: 50%;}
+.g75 .g66 .g66 {width: 66.66%;}
+.g75 .g66 .g75 {width: 75%;}
+.g75 .g75 .g25 {width: 25%;}
+.g75 .g75 .g33 {width: 33.33%;}
+.g75 .g75 .g50 {width: 50%;}
+.g75 .g75 .g66 {width: 66.66%;}
+.g75 .g75 .g75 {width: 75%;}
+
+.g66 .g33 .g25 {width: 25%;}
+.g66 .g33 .g33 {width: 33.33%;}
+.g66 .g33 .g50 {width: 50%;}
+.g66 .g33 .g66 {width: 66.66%;}
+.g66 .g33 .g75 {width: 75%;}
+.g66 .g50 .g25 {width: 25%;}
+.g66 .g50 .g33 {width: 33.33%;}
+.g66 .g50 .g50 {width: 50%;}
+.g66 .g50 .g66 {width: 66.66%;}
+.g66 .g50 .g75 {width: 75%;}
+.g66 .g66 .g25 {width: 25%;}
+.g66 .g66 .g33 {width: 33.33%;}
+.g66 .g66 .g50 {width: 50%;}
+.g66 .g66 .g66 {width: 66.66%;}
+.g66 .g66 .g75 {width: 75%;}
+.g66 .g75 .g25 {width: 25%;}
+.g66 .g75 .g33 {width: 33.33%;}
+.g66 .g75 .g50 {width: 50%;}
+.g66 .g75 .g66 {width: 66.66%;}
+.g66 .g75 .g75 {width: 75%;}
+
+#service .g33 {width: 50%;}
+#service .g25 {width: 50%;}
+#servicebis .g33 {width: 50%;}
+#servicebis .g25 {width: 50%;}
+}
+
+
+/* 768px ----------- */
+@media only screen  and (min-width : 37.5em) {
+/* Styles */
+.g100,.g25,.g33,.g50,.g66,.g75 {display:inline; float: left;}
+.g100 {width: 100%;}
+.g25 {width: 25%;}
+.g33 {width: 33.33%;}
+.g50 {width: 50%;}
+.g66 {width: 66.66%;}
+.g75 {width: 75%;}
+.g100.marge {width: calc(100% - 1em);padding-left: 1em;}
+.g25.marge {width: calc(25% - 1em);padding-left: 1em;}
+.g33.marge {width: calc(33.33% - 1em);padding-left: 1em;}
+.g50.marge {width: calc(50% - 1em);padding-left: 1em;}
+.g66.marge {width: calc(66.66% - 1em);padding-left: 1em;}
+.g75.marge {width: calc(75% - 1em);padding-left: 1em;}
+#content.g75 {width: 66.66%;}
+#menu.g25 {width: 33.33%;}
+.g75 .g25 {width: 100%;}
+.g75 .g33 {width: 100%;}
+.g75 .g50 {width: 100%;}
+.g75 .g66 {width: 100%;}
+.g75 .g75 {width: 100%;}
+.g66 .g25 {width: 100%;}
+.g66 .g33 {width: 100%;}
+.g66 .g50 {width: 100%;}
+.g66 .g66 {width: 100%;}
+.g66 .g75 {width: 100%;}
+
+
+.g50 .g50 .g25 {width: 25%;}
+.g50 .g50 .g33 {width: 33.33%;}
+.g50 .g50 .g50 {width: 50%;}
+.g50 .g50 .g66 {width: 66.66%;}
+.g50 .g50 .g75 {width: 75%;}
+.g50 .g66 .g25 {width: 25%;}
+.g50 .g66 .g33 {width: 33.33%;}
+.g50 .g66 .g50 {width: 50%;}
+.g50 .g66 .g66 {width: 66.66%;}
+.g50 .g66 .g75 {width: 75%;}
+.g50 .g75 .g25 {width: 25%;}
+.g50 .g75 .g33 {width: 33.33%;}
+.g50 .g75 .g50 {width: 50%;}
+.g50 .g75 .g66 {width: 66.66%;}
+.g50 .g75 .g75 {width: 75%;}
+
+.g75 .g33 .g25 {width: 25%;}
+.g75 .g33 .g33 {width: 33.33%;}
+.g75 .g33 .g50 {width: 50%;}
+.g75 .g33 .g66 {width: 66.66%;}
+.g75 .g33 .g75 {width: 75%;}
+.g75 .g50 .g25 {width: 25%;}
+.g75 .g50 .g33 {width: 33.33%;}
+.g75 .g50 .g50 {width: 50%;}
+.g75 .g50 .g66 {width: 66.66%;}
+.g75 .g50 .g75 {width: 75%;}
+.g75 .g66 .g25 {width: 25%;}
+.g75 .g66 .g33 {width: 33.33%;}
+.g75 .g66 .g50 {width: 50%;}
+.g75 .g66 .g66 {width: 66.66%;}
+.g75 .g66 .g75 {width: 75%;}
+.g75 .g75 .g25 {width: 25%;}
+.g75 .g75 .g33 {width: 33.33%;}
+.g75 .g75 .g50 {width: 50%;}
+.g75 .g75 .g66 {width: 66.66%;}
+.g75 .g75 .g75 {width: 75%;}
+
+.g66 .g33 .g25 {width: 25%;}
+.g66 .g33 .g33 {width: 33.33%;}
+.g66 .g33 .g50 {width: 50%;}
+.g66 .g33 .g66 {width: 66.66%;}
+.g66 .g33 .g75 {width: 75%;}
+.g66 .g50 .g25 {width: 25%;}
+.g66 .g50 .g33 {width: 33.33%;}
+.g66 .g50 .g50 {width: 50%;}
+.g66 .g50 .g66 {width: 66.66%;}
+.g66 .g50 .g75 {width: 75%;}
+.g66 .g66 .g25 {width: 25%;}
+.g66 .g66 .g33 {width: 33.33%;}
+.g66 .g66 .g50 {width: 50%;}
+.g66 .g66 .g66 {width: 66.66%;}
+.g66 .g66 .g75 {width: 75%;}
+.g66 .g75 .g25 {width: 25%;}
+.g66 .g75 .g33 {width: 33.33%;}
+.g66 .g75 .g50 {width: 50%;}
+.g66 .g75 .g66 {width: 66.66%;}
+.g66 .g75 .g75 {width: 75%;}
+
+#service .g33 {width: 50%;}
+#service .g25 {width: 50%;}
+#servicebis .g33 {width: 50%;}
+#servicebis .g25 {width: 50%;}
+
+}
+
+
+
+/* 980px ----------- */
+@media only screen  and (min-width : 68.5em) {
+/* Styles */
+.g100,.g25,.g33,.g50,.g66,.g75 {display:inline; float: left;}
+.g100 {width: 100%;}
+.g25 {width: 25%;}
+.g33 {width: 33.33%;}
+.g50 {width: 50%;}
+.g66 {width: 66.66%;}
+.g75 {width: 75%;}
+.g100.marge {width: calc(100% - 1em);padding-left: 1em;}
+.g25.marge {width: calc(25% - 1em);padding-left: 1em;}
+.g33.marge {width: calc(33.33% - 1em);padding-left: 1em;}
+.g50.marge {width: calc(50% - 1em);padding-left: 1em;}
+.g66.marge {width: calc(66.66% - 1em);padding-left: 1em;}
+.g75.marge {width: calc(75% - 1em);padding-left: 1em;}
+#content.g75 {width: 75%;}
+#menu.g25 {width: 25%;}
+#centre.g25 {width: 25%;}
+#centre.g33 {width: 33.33%;}
+#centre.g50 {width: 50%;}
+#centre.g66 {width: 66.66%;}
+#centre.g75 {width: 75%;}
+#extra.g25 {width: 25%;}
+#extra.g33 {width: 33.33%;}
+#extra.g50 {width: 50%;}
+#extra.g66 {width: 66%;}
+#extra.g75 {width: 75%;}
+#service .g33 {width: 33.33%;}
+#service .g25 {width: 25%;}
+#servicebis .g33 {width: 33.33%;}
+#servicebis .g25 {width: 25%;}
+
+.g75 .g25 {width: 25%;}
+.g75 .g33 {width: 33.33%;}
+.g75 .g50 {width: 50%;}
+.g75 .g66 {width: 66.66%;}
+.g75 .g75 {width: 75%;}
+.g66 .g25 {width: 25%;}
+.g66 .g33 {width: 33.33%;}
+.g66 .g50 {width: 50%;}
+.g66 .g66 {width: 66.66%;}
+.g66 .g75 {width: 75%;}
+
+}
+/* 1200px ----------- */
+@media only screen  and (min-width : 76em) {
+/* Styles */
+.g100,.g25,.g33,.g50,.g66,.g75 {display:inline; float: left;}
+.g100 {width: 100%;}
+.g25 {width: 25%;}
+.g33 {width: 33.33%;}
+.g50 {width: 50%;}
+.g66 {width: 66.66%;}
+.g75 {width: 75%;}
+.g100.marge {width: calc(100% - 1em);padding-left: 1em;}
+.g25.marge {width: calc(25% - 1em);padding-left: 1em;}
+.g33.marge {width: calc(33.33% - 1em);padding-left: 1em;}
+.g50.marge {width: calc(50% - 1em);padding-left: 1em;}
+.g66.marge {width: calc(66.66% - 1em);padding-left: 1em;}
+.g75.marge {width: calc(75% - 1em);padding-left: 1em;}
+
+}
+
+/* ONLY TEXT */
+
+.onlytext_wrapper .g100 {width: 100%;}
+.onlytext_wrapper .g25 {width: 100%;}
+.onlytext_wrapper .g33 {width: 100%;}
+.onlytext_wrapper .g50 {width: 100%;}
+.onlytext_wrapper .g66 {width: 100%;}
+.onlytext_wrapper .g75 {width: 100%;}
+.onlytext_wrapper #content.g75 {width: 100%;}
+.onlytext_wrapper #menu.g25 {width: 100%;}
+.onlytext_wrapper #centre.g25 {width: 100%;}
+.onlytext_wrapper #centre.g33 {width: 100%;}
+.onlytext_wrapper #centre.g50 {width: 100%;}
+.onlytext_wrapper #centre.g66 {width: 100%;}
+.onlytext_wrapper #centre.g75 {width: 100%;}
+.onlytext_wrapper #extra.g25 {width: 100%;}
+.onlytext_wrapper #extra.g33 {width: 100%;}
+.onlytext_wrapper #extra.g50 {width: 100%;}
+.onlytext_wrapper #extra.g66 {width: 100%;}
+.onlytext_wrapper #extra.g75 {width: 100%;}
+.onlytext_wrapper #service .g33 {width: 100%;}
+.onlytext_wrapper #service .g25 {width: 100%;}
+.onlytext_wrapper #servicebis .g33 {width: 100%;}
+.onlytext_wrapper #servicebis .g25 {width: 100%;}
+
+.onlytext_wrapper .g75 .g25 {width: 100%;}
+.onlytext_wrapper .g75 .g33 {width: 100%;}
+.onlytext_wrapper .g75 .g50 {width: 100%;}
+.onlytext_wrapper .g75 .g66 {width: 100%;}
+.onlytext_wrapper .g75 .g75 {width: 100%;}
+.onlytext_wrapper .g66 .g25 {width: 100%;}
+.onlytext_wrapper .g66 .g33 {width: 100%;}
+.onlytext_wrapper .g66 .g50 {width: 100%;}
+.onlytext_wrapper .g66 .g66 {width: 100%;}
+.onlytext_wrapper .g66 .g75 {width: 100%;}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 114em) {
+/* Styles */
+
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 20em) and (max-device-width : 30em) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 20em) and (max-device-width : 30em) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+
+
+/* WIDESCREEN */
+/* Increased body size for legibility */
+@media only screen and (min-width: 88em) { 
+	body {max-width:120em;} /* 18.5px / 28px */
+}
+
+/* PRINT */
+@media print {
+  * {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important} /* Black prints faster */
+  pre, blockquote {border: 1px solid #999; page-break-inside: avoid; }
+  thead {display: table-header-group; } /* Repeat header row at top of each printed page */
+  tr, img {page-break-inside: avoid; }
+  img {max-width: 100% !important; }
+  @page {margin: 0.5cm}
+  p, h2, h3 {orphans: 3; widows: 3}
+  h2, h3{page-break-after: avoid}
+  #tetiere, #menu1, #navigation, #acces_direct, #pied1, footer {
+  	display: none;
+  }
+  
+}
+
+
+
+/* @end */

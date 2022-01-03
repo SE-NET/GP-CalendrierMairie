@@ -17,4 +17,12 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+     * @Route("/agenda", name="agenda")
+     */
+    public function agenda(): Response
+    {
+        return $this->render('calendar/calendar.html.twig');
+    }
 }
