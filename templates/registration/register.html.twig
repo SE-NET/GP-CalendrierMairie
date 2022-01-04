@@ -53,13 +53,23 @@
     </div>
 
     {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.firstname, {
+        label: 'Nom :',
+        'attr': {'class': 'form-control input-field'} })  }} <br>
+    {{ form_row(registrationForm.lastname, {
+        label: 'Prénom :',
+        'attr': {'class': 'form-control input-field '} })  }} <br>
+    {{ form_row(registrationForm.address, {
+        label: 'Addresse postale :',
+        'attr': {'class': 'form-control input-field '} })  }} <br>
         {{ form_row(registrationForm.email, {
-            label: 'adresse e-mail',
-            'attr': {'class': 'form-control input-field '} })  }}
+            label: 'adresse e-mail :',
+            'attr': {'class': 'form-control input-field '} })  }} <br>
     {{ form_row(registrationForm.plainPassword, {
-            label: 'Mot de passe',
+            label: 'Mot de passe :',
             'attr': {'class': 'form-control input-field'}
-        }) }}
+        }) }} <br>
+
         {{ form_row(registrationForm.agreeTerms) }}
 
         <button type="submit" class="action-button">S'inscrire</button>
