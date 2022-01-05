@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Event;
@@ -28,8 +29,27 @@ class HomeController extends AbstractController
     /**
      * @Route("/agenda", name="agenda")
      */
-    public function agenda(): Response
+    public function agenda(EventRepository $eventRepository): Response
     {
+        $allEvents = $eventRepository->findAll();
+        $user = null;
+        $events = array();
+        foreach ($allEvents as $event) {
+            $events[] = array(
+                'title' => $event->getTitle(),
+                'start' => $event->getDate()->format('Y-m-d'),
+                'end' => $event->getDateEnd()->format('Y-m-d'),
+                'allDay' => 1,
+                'user' => $event->getUser()->getId(),
+                'url' => 'event/'.$event->getId(),
+                'editable' => false
+            );
+        }
+
+        $json = json_encode($events);
+        $filesystem = new Filesystem();
+
+        $filesystem->dumpFile('assets/calendar/json/events.json', $json);
         return $this->render('calendar/calendar.html.twig');
     }
 }
