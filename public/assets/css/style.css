@@ -1910,12 +1910,11 @@ p.pagination .on {
 
 
 #connexion .login_on {
-	background: url('../habillage/pic_login_oui.png') no-repeat;
 	padding-left: 24px;
 }
 #connexion .login_off {
-	background: url('../habillage/pic_login_non.png') no-repeat;
 	padding-left: 24px;
+	color: blue;
 }
 #connexion .qui {
 	font-weight: bold;

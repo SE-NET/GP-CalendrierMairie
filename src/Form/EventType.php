@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Event;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -16,18 +17,20 @@ class EventType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date', DateType::class, [
-                'label' => 'Date de début'
-            ])
+            ->add('date', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
             ->add('title', TextType::class, [
                 'label' => 'Titre de l\'évènement'
             ])
-            ->add('allDay', CheckboxType::class, [
-                'label' => 'Jour entier'
+            ->add('description', TextareaType::class, [
+                'label' => "Description de l'événement"
             ])
-            ->add('dateEnd', DateType::class, [
-                'label' => 'Date de fin'
-            ])
+            ->add('dateEnd', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
             ->add('save', SubmitType::class)
         ;
     }
