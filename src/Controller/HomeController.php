@@ -36,11 +36,13 @@ class HomeController extends AbstractController
         $events = array();
         foreach ($allEvents as $event) {
             $events[] = array(
-                'start' => $event->getDate()->format('Y-m-d'),
                 'title' => $event->getTitle(),
-                'allDay' => $event->getAllDay(),
+                'start' => $event->getDate()->format('Y-m-d'),
                 'end' => $event->getDateEnd()->format('Y-m-d'),
-                'user' => $event->getUser()->getId()
+                'allDay' => 1,
+                'user' => $event->getUser()->getId(),
+                'url' => 'event/'.$event->getId(),
+                'editable' => false
             );
         }
 
