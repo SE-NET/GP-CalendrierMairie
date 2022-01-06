@@ -31,10 +31,20 @@ class HomeController extends AbstractController
      */
     public function agenda(EventRepository $eventRepository): Response
     {
-        $allEvents = $eventRepository->findAll();
-        $user = null;
+        $api = file_get_contents('https://calendrier.api.gouv.fr/jours-feries/metropole.json');
+        $feries = array();
+        foreach (json_decode($api) as $date=>$name){
+            $feries[] = array(
+                'title' => $name,
+                'start' => $date,
+                'end' => $date,
+                'display' => 'background'
+            );
+        }
+
+
         $events = array();
-        foreach ($allEvents as $event) {
+        foreach ($eventRepository->findAll() as $event) {
             $events[] = array(
                 'title' => $event->getTitle(),
                 'start' => $event->getDate()->format('Y-m-d'),
@@ -46,7 +56,8 @@ class HomeController extends AbstractController
             );
         }
 
-        $json = json_encode($events);
+        ;
+        $json = json_encode(array_merge($events, $feries));
         $filesystem = new Filesystem();
 
         $filesystem->dumpFile('assets/calendar/json/events.json', $json);
