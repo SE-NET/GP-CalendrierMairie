@@ -27,14 +27,15 @@ class EventController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $rq = $request->request->get('event');
             $event->setTitle($rq['title']);
-            $dateStart = new DateTime($rq['date']['year'] . '-' . $rq['date']['month'] . '-' . $rq['date']['day']);
+            //$dateStart = new DateTime($rq['date']['year'] . '-' . $rq['date']['month'] . '-' . $rq['date']['day']);
             //$dateEnd = new DateTime($rq['dateEnd']['year'] . '-' . $rq['dateEnd']['month'] . '-' . $rq['dateEnd']['day']);
-            $event->setDate($dateStart);
-            $event->setAllDay($rq['allDay']);
+            $event->setDate(date_create($rq['date']));
+            $event->setDateEnd(date_create($rq['dateEnd']));
+            $event->setDescription($rq['description']);
             $event->setUser($this->getUser());
             $em->persist($event);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('agenda');
         }
         
 
@@ -58,7 +59,7 @@ class EventController extends AbstractController
                 'success',
                 'Les opérations ont été ajoutées/modifiées'
             );
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('agenda');
         }
 
         return $this->render("calendar/addEvent.html.twig", [

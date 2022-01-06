@@ -247,6 +247,7 @@ background: #f5f5f5;
 	background: transparent;
 	min-height: 210px;
 	margin-bottom: 2em;
+	background-image: url("https://www.commune-rosieres10.fr/local/cache-vignettes/L1600xH220/rubon1-ad5fc.jpg") ;
 }
 
 
@@ -980,9 +981,12 @@ ul#themes li.ouvert ul.nivo_2 li.nivo_3 ul li.on a:before {
 	padding: 0;
 }
 #extra .contenu_pave {
-	background: #f5f5f5;
+	background: #017efd;
 }
 
+#extra .contenu_pave_ag {
+	background: #f5f5f5;
+}
 #direct .contenu_pave {
 	background: transparent;
 	padding: 0;
@@ -1138,6 +1142,19 @@ input {
 	color: #D3BD39;
 	transform: translateY(-0.5rem);
 }
+
+.input-area {
+	z-index: 1;
+	font: inherit;
+	font-size: 1.225rem;
+	padding: .25rem 0;
+	outline: 0;
+	transform: translateY(-0.5rem);
+	border: 1.5px solid  #D3BD39;
+	color: #D3BD39;
+	background: transparent;
+	width: 70%;
+}
 .action {
 	margin-top: 2rem;
 }
@@ -1147,7 +1164,7 @@ input {
 	padding: 0.2em;
 	width: 15%;
 	font-weight: 500;
-	background-color: #41A194;
+	background-color: #017efd;
 	color: #FFF;
 	border: 0;
 	margin: 50px 250px;

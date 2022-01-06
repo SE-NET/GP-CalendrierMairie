@@ -105,25 +105,29 @@
                     <div id="pre_extra">
                         <div id="connexion" class="pave">
                             <h2 class="decale"><span class="intitule">Connexion</span></h2>
-
-                                  <div class="mb-3">                                                                                                
-                                      Vous êtes connecté à  {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>             
-                                  </div>                                                                                                            
-                                {% if app.user %}
-
+                                  <div class="mb-3 chapos">
+                                      {% if app.user != false %}
+                                          Vous êtes connecté à
+                                          {{ app.user.username }}
+                                  </div>
+                                  <div class="contenu_pave">
+                                      <div class="login_off"><a href="{{ path('app_logout') }}" class="chapos">Déconnexion</a></div>
+                                  </div>
+                                      {% endif %}
+                                {% if app.user != true %}
                             <div class="contenu_pave">
-                                <div class="login_off"><span class="decale">Vous n'êtes pas connecté : </span><a href="login">Se connecter</a></div>
+                                <div class="login_off"><span class="decale">Vous n'êtes pas connecté : </span><a href="login" class="chapos">Se connecter</a></div>
                             </div>
                             {% endif %}
                              <div class="contenu_pave">
-                                  <div class="login_off"><span class="decale">Vous n'êtes pas connecté : </span><a href="register">S'inscrire</a></div>
+                                  <div class="login_off"><span class="decale">Vous n'êtes pas connecté : </span><a href="register" class="chapos">S'inscrire</a></div>
                              </div>
                         </div><!-- .pave -->
                     </div><!-- #pre_extra -->
 
                     <div id="agenda" class="pave">
                         <h2 class="titraille"><span class="intitule">Agenda</span></h2>
-                        <div class="contenu_pave">
+                        <div class="contenu_pave_ag">
                             <h3 class="decale">Prochainement :</h3>
                             <div class="vevent id_52">
                                 <div class="g25">
