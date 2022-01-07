@@ -4,42 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ace9900-cd6a-4fca-9694-15d0b4cee5d0" name="Changes" comment="premier commit front">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style_defaut.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/style_layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/17885918873e41bd6461ee9c327feedc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/arton114-edb70.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/arton115-d93ea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/arton116-b8d82.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/arton221.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/banniere_tipi_url_300250.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/db6b69aeb112218a7094f8621eb50758.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/image_a_integrer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/pdf-39070.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/portailfamille.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/rubon1-ad5fc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="9ace9900-cd6a-4fca-9694-15d0b4cee5d0" name="Changes" comment="&#10;ajout des jours fériés">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/calendar/json/events.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EventController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/calendar/calendar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calendar/calendar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -140,8 +116,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/form" />
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
@@ -159,8 +133,10 @@
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
     </include_path>
   </component>
   <component name="ProjectId" id="1zDYFIgLfg3myg3GioCntYSzf0s" />
@@ -169,6 +145,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -211,7 +188,34 @@
       <workItem from="1639401664683" duration="5000" />
       <workItem from="1640274663835" duration="19224000" />
       <workItem from="1640958356400" duration="14811000" />
+      <workItem from="1641375031782" duration="1507000" />
+      <workItem from="1641376622359" duration="4810000" />
+      <workItem from="1641384643540" duration="238000" />
+      <workItem from="1641498637092" duration="5611000" />
+      <workItem from="1641568816738" duration="532000" />
     </task>
+    <task id="LOCAL-00001" summary="Create events from database (do a composer install)">
+      <created>1641378725254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641378725254</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&#10;Event fix">
+      <created>1641380382597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641380382597</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&#10;ajout des jours fériés">
+      <created>1641503578032</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641503578032</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,8 +234,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Front" />
     <MESSAGE value="premier commit front" />
-    <option name="LAST_COMMIT_MESSAGE" value="premier commit front" />
+    <MESSAGE value="Create events from database (do a composer install)" />
+    <MESSAGE value="&#10;Event fix" />
+    <MESSAGE value="&#10;ajout des jours fériés" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;ajout des jours fériés" />
   </component>
 </project>
