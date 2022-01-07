@@ -13,6 +13,7 @@ use App\Service\ServiceEvent;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
+
 class EventController extends AbstractController
 {
     /**
@@ -64,6 +65,16 @@ class EventController extends AbstractController
 
         return $this->render("calendar/addEvent.html.twig", [
             'form' => $form->createView(),
+        ]);
+    }
+    /**
+     * @Route("event/show/{id}", name="show_event", methods={"GET"})
+     */
+    public function show(int $id, EventRepository $event): Response
+    {
+        $events = $event->findOneBy(['id' => $id]);
+        return $this->render('calendar/showEvent.html.twig', [
+            'event' => $events,
         ]);
     }
 

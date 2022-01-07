@@ -45,7 +45,7 @@
             </div><!-- contenu_pave -->
         </div><!-- pave -->
     </nav><!-- #menu_gauche -->
-    <div style="text-align: center" class="crayon article-chapo-8 chapo">Formulaire d'inscription à l'Espace Citoyen</div>
+    <div style="text-align: center" class="crayon article-chapo-8 chapo "><p class="align">Formulaire d'inscription à l'Espace Citoyen</p></div>
     <div id="" class="crayon article-texte-8 texte chapo">
         La mairie a mis en place un système de compte citoyen nécessitant une identification
         pour certaines démarches. Depuis cet espace vous pourrez
@@ -58,7 +58,7 @@
     {{ form_start(registrationForm) }}
     {{ form_row(registrationForm.firstname, {
         label: 'Nom :',
-        'attr': {'class': 'form-control input-field'} })  }} <br>
+        'attr': {'class': 'form-control input-field test'} })  }} <br>
     {{ form_row(registrationForm.lastname, {
         label: 'Prénom :',
         'attr': {'class': 'form-control input-field '} })  }} <br>
@@ -72,9 +72,6 @@
             label: 'Mot de passe :',
             'attr': {'class': 'form-control input-field'}
         }) }} <br>
-
-        {{ form_row(registrationForm.agreeTerms) }}
-
         <button type="submit" class="action-button">S'inscrire</button>
     {{ form_end(registrationForm) }}
 {% endblock %}

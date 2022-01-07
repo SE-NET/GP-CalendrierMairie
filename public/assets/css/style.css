@@ -1915,6 +1915,7 @@ p.pagination .on {
 #connexion .login_off {
 	padding-left: 24px;
 	color: blue;
+	text-align: center;
 }
 #connexion .qui {
 	font-weight: bold;

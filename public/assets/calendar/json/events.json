@@ -1,8 +1,1 @@
-[
-  {
-    "title": "11 novembre",
-    "start": "2021-11-11",
-    "end": "2021-11-11",
-    "display": "background"
-  }
-]
+[{"title":"testedit3","start":"2017-01-01","end":"2017-01-01","allDay":1,"user":4,"url":"event\/1","editable":false},{"title":"test2","start":"2022-01-12","end":"2022-01-12","allDay":1,"user":4,"url":"event\/2","editable":false}]
