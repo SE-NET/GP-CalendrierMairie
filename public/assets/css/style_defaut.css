@@ -1215,6 +1215,11 @@ input {
 	margin-top: 2%;
 }
 
+.event-titre {
+    width: 10em;
+    text-align: center;
+}
+
 .test {
 	margin-top: 10%;
 	display: inline;
@@ -1229,6 +1234,17 @@ input {
 	padding: 0.5px;
 	text-transform: uppercase;
 	display: inline;
+}
+
+.event-info {
+    display: flex !important;
+    justify-content: space-around !important;
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.eventdescription {
+    clear: none !important;
 }
 /* @group ACTU */
 
@@ -1452,7 +1468,6 @@ li.slide {
 }
 .bulle_date_debut {
 	display: block;
-	width: 5em;
 	padding: 0.5em 0.5em;
 	margin: 0 auto;
 	text-align: center;
@@ -3122,3 +3137,4 @@ li.slide {
 #breves article.intro .logo img {
 	margin-bottom: -15px;
 }
+

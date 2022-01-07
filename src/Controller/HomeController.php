@@ -51,7 +51,7 @@ class HomeController extends AbstractController
                 'end' => $event->getDateEnd()->format('Y-m-d'),
                 'allDay' => 1,
                 'user' => $event->getUser()->getId(),
-                'url' => 'event/'.$event->getId(),
+                'url' => 'event/show/'.$event->getId(),
                 'editable' => false
             );
         }

@@ -63,7 +63,7 @@ class EventController extends AbstractController
             return $this->redirectToRoute('agenda');
         }
 
-        return $this->render("calendar/addEvent.html.twig", [
+        return $this->render("calendar/editEvent.html.twig", [
             'form' => $form->createView(),
         ]);
     }

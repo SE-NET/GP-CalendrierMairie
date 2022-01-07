@@ -45,31 +45,26 @@
             </div><!-- contenu_pave -->
         </div><!-- pave -->
     </nav><!-- #menu_gauche -->
-    <div class="eventshow">
-        <h2 class="eventtitle">Détail de l'événement :</h2><br>
-
-        <div class="g25 event-info">
-            <div class="bulle_date_debut">
-                <div class="bulle-event">{{ event.date|date('F') }}</div>
-                <div class="bulle-event">{{ event.date|date('j') }}</div>
-                <div class="bulle-event">{{ event.date|date('Y') }}</div>
-            </div>
-            <div>
-                <h4 class="event-titre">{{ event.title }}</h4>
-            </div>
-            <div class="bulle_date_debut">
-                <div class="bulle-event">{{ event.dateEnd|date('F') }}</div>
-                <div class="bulle-event">{{ event.dateEnd|date('j') }}</div>
-                <div class="bulle-event">{{ event.dateEnd|date('Y') }}</div>
-            </div>
-        </div>
-
-       <div>
-           <h4 class="eventtitle">Description de l'événement :</h4>
-           <h5 class="eventdescription">{{ event.description }}</h5>
-           <button class="action-button-ag test"><a style="color: white;" href="../../event/edit/{{ event.id }}">Modifier</a></button>
-           <button class="action-button-ag test"><a style="color: white;" href="../../event/remove/{{ event.id }}">Supprimer</a></button>
-       </div>
+    <div style="text-align: center" class="crayon article-chapo-8 chapo"><p class="align">Modifier l'évènement</p></div>
+    <div id="" class="crayon article-texte-8 texte chapo">
+       En tant qu'habitant de la commune de Rosières-Près-Troyes, vous pouvez créer un événement sur le
+        calendrier de la ville, pour ce faire, nous vous remercions de remplir le formulaire ci-dessous:
     </div>
-
+    {{ form_start(form) }}
+    {{ form_row(form.title, {
+        label: "Nom de l'événement :",
+        'attr': {'class': 'form-control input-field'} })  }}
+    {{ form_row(form.description, {
+        label: "Description de l'événement :",
+        'attr': {'class': 'form-control input-area'} })  }}
+    {{ form_row(form.date, {
+        label: "Date de début de l'événement :",
+        'attr': {'class': 'form-control input-field'} })  }}
+    {{ form_row(form.dateEnd, {
+        label: "Date de fin de l'événement :",
+        'attr': {'class': 'form-control input-field'} })  }}
+    {{ form_row(form.save, {
+        label: "Valider",
+        'attr': {'class': 'action-button'} })  }}
+    {{ form_end(form) }}
 {% endblock %}
