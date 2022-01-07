@@ -884,12 +884,16 @@ table {
 }
 table th {
 	background: #777;
-	color: #fff;
+	color: white;
 	padding: 0 0 0 4px;
 	border-left: solid 1px #fff;
 	border-bottom: solid 1px #eee;
 	vertical-align: text-bottom;
 	font-size: 1em;
+}
+
+table th a {
+	color: white;
 }
 
 
@@ -1939,4 +1943,13 @@ ul.liens_pied {
 ul.liens_pied li {
 	display: inline-block;
 	padding: 0 8px;
+}
+
+form label, #formReset label{
+	color: white;
+	margin-right: 10px;
+}
+
+#titreReset{
+	margin-top: 140px;
 }
